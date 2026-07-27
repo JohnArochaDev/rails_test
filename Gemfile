@@ -44,4 +44,12 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  # Linter
+  gem "ruby-lsp-rails", group: :development
+
+  # Autocomplete for dynamically-defined Rails/ActiveRecord methods (e.g. schema-based
+  # column methods, .all/.find/etc.) that Ruby LSP's static index can't fully see
+  gem "solargraph", require: false
+  gem "solargraph-rails", require: false
 end
